@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+  overflow-x: hidden;
+}
+
+h3 {
+  text-align: center;
+}
+
+.space {
+  margin-bottom: 150px;
+}
+
+.page-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.h{
+  background-color: bisque;
+}
