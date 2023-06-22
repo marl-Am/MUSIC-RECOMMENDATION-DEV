@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import './App.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCircleInfo } from '@fortawesome/free-brands-svg-icons';
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
