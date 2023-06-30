@@ -1,4 +1,4 @@
-## [Recommend Artist](https://marl-am.github.io/)
+## [Recommend Artist](https://recommend-artist.web.app/)
 
 
 Front page
