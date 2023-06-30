@@ -15,27 +15,27 @@ function Header() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch('/get_recommendations', {
+        const response = await fetch('https://backend-cuohoaqegq-ue.a.run.app/get_recommendations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ artist_name: artistName })
-        }); 
+        });
         try {
             const data = await response.json();
             if (response.ok) {
-                
+
                 // Check if the response contains an error
                 if (data.error) {
                     console.error('Server error:', data.error);
-                    alert('Server error: Unable To Contact Server.');
+                    alert('Response contains an error.');
                 } else {
                     setSimilarArtists(data.similar_artists);
                 }
             } else {
                 console.error('Response error:', response.status);
-                alert('Response error: ' + response.status);
+                alert('Unable to contact the server at this time.');
             }
         } catch (error) {
             console.error('JSON parsing error:', error);
@@ -58,13 +58,18 @@ function Header() {
                             placeholder='Enter the name of an artist you like'
                             required
                         />
-                        <button type="submit" class="border border-gray-700 hover:border-white">Find Artists</button>
+                        <button type="submit">Find Artists</ button>
                     </form>
                 </div>
             </div>
 
-            {similarArtists && <Results similarArtists={similarArtists} />}
 
+            <br></br>
+            {similarArtists && <Results similarArtists={similarArtists} />}
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </>
     );
 }
