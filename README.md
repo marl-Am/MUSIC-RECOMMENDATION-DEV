@@ -17,7 +17,7 @@ Python Dependencies
 
 Instructions
 * In the terminal type "cd client" click enter then type in "npm install" and click enter.
-* Now type in "cd .." to get to the root folder then "cd flask-server" folder and create the .env file. Add the variables "SPOTIFY_CLIENT_ID" and  "SPOTIFY_CLIENT_SECRET". You can gain the client id and client secret from the Spotify Web Api.
+* Now type in "cd .." to get to the root folder then "cd flask-server" folder and create the .env file or edit and rename the ".env.example" I included in the flask-server folder. Add the variables "SPOTIFY_CLIENT_ID" and  "SPOTIFY_CLIENT_SECRET". You can gain the client id and client secret from the Spotify Web Api.
 
 * Install the python dependencies
 
