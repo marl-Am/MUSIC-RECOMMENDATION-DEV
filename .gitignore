@@ -8,6 +8,8 @@ flask-server/venv
 .venv
 .env
 
+flask-server/.cache
+.cache
 # dependencies
 /node_modules
 client/node_modules
