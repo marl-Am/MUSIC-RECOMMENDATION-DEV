@@ -15,7 +15,7 @@ function Header() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = await fetch('https://backend-cuohoaqegq-ue.a.run.app/get_recommendations', {
+        const response = await fetch('/get_recommendations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
