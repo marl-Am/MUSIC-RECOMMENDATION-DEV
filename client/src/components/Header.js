@@ -45,8 +45,8 @@ function Header() {
 
     return (
         <>
-            <div className='search-container'>
-                <div className='field-container'>
+            <div className='search-container m-8'>
+                <div className='field-container bg-gray-900'>
                     <form className='field' onSubmit={handleSubmit}>
                         <input
                             ref={inputRef}
@@ -55,56 +55,15 @@ function Header() {
                             name="artist_name"
                             value={artistName}
                             onChange={(event) => setArtistName(event.target.value)}
+                            placeholder='Enter the name of an artist you like'
                             required
                         />
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="border border-gray-700 hover:border-white">Find Artists</button>
                     </form>
                 </div>
             </div>
 
-            {!similarArtists && (
-                <div className='c demo-c'>
-                    <br></br><br></br>
-                    <div className="cards-list">
-                        <a className="card artist-card demo-card" href='#'>
-                            <div className="card_image">
-                                {/* <img src="#" alt="" /> */}
-                            </div>
-                        </a>
-                        <a className="card artist-card demo-card" href='#'>
-                            <div className="card_image">
-                                {/* <img src="#" alt="" /> */}
-                            </div>
-                        </a>
-                        <a className="card artist-card demo-card" href='#'>
-                            <div className="card_image">
-                                {/* <img src="#" alt="" /> */}
-                            </div>
-                        </a>
-                        <a className="card artist-card demo-card" href='#'>
-                            <div className="card_image">
-                                {/* <img src="#" alt="" /> */}
-                            </div>
-                        </a>
-                        <a className="card artist-card demo-card" href='#'>
-                            <div className="card_image">
-                                {/* <img src="#" alt="" /> */}
-                            </div>
-                        </a>
-                        <a className="card artist-card demo-card" href='#'>
-                            <div className="card_image">
-                                {/* <img src="#" alt="" /> */}
-                            </div>
-                        </a>
-                    </div>
-
-
-                    <br></br><br></br><br></br><br></br><br></br>
-                </div>
-            )}
-
             {similarArtists && <Results similarArtists={similarArtists} />}
-            <br></br>
 
         </>
     );

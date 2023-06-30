@@ -5,7 +5,7 @@ function Results({ similarArtists }) {
     return (
         <div className='c'>
             <br></br><br></br>
-            <div className="cards-list">
+            <div className="cards-list bg-gray-900">
                 {similarArtists?.map((artist) => (
                     <a className="card artist-card" key={artist.id} href={`https://open.spotify.com/artist/${artist.id}`} target="_blank" rel="noopener noreferrer">
                         <div className="card_image">
@@ -21,8 +21,7 @@ function Results({ similarArtists }) {
                     </a>
                 ))}
             </div>
-            <br></br><br></br><br></br><br></br><br></br>
-            <br></br><br></br>
+            <br className='mb-2'></br>
             
         </div>
     );

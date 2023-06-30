@@ -5,11 +5,10 @@
 Front page
 ![home](images/1_frontpage.png)
 
-After entering the name of an artist
+After entering the name of an artist, ypur results will be shown.
+By clicking on an artist, you are sent to their Spotify page
 ![home](images/2_frontpage.png)
 
-By clicking on an artist, you are sent to their Spotify page
-![home](images/3_frontpage.png)
 
 Python Dependencies
 * flask

@@ -6,12 +6,11 @@
 
 * {
     font-family: Roboto;
+    
 }
 
 .search-container {
     position: relative;
-    margin: 8px;
-    background-color: #E9967A;
 }
 
 
@@ -31,10 +30,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* background-color: black; */
 }
 
 .field {
@@ -52,7 +52,8 @@ input[type="text"] {
     /* Adjust the font size as needed */
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
+    /* background-color: #2a2a2a; */
 }
 
 button[type="submit"] {
@@ -61,8 +62,7 @@ button[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
-    border: none;
-    background-color: #007bff;
+    /* background-color: #007bff; */
     color: #fff;
     cursor: pointer;
 }
