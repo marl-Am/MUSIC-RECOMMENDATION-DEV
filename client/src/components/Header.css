@@ -6,7 +6,7 @@
 
 * {
     font-family: Roboto;
-    
+
 }
 
 .search-container {
@@ -53,7 +53,6 @@ input[type="text"] {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid white;
-    /* background-color: #2a2a2a; */
 }
 
 button[type="submit"] {
@@ -62,7 +61,13 @@ button[type="submit"] {
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
-    /* background-color: #007bff; */
+
     color: #fff;
     cursor: pointer;
+    background-color: rgb(15 23 42);
+}
+
+button[type="submit"]:hover {
+    border: 2px solid #fff;
+    /* Add a white border on hover */
 }
