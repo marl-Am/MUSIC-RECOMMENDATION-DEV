@@ -14,7 +14,7 @@ function Footer() {
           <a href="mailto:mamedee001@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGoogle} /></a>
           <a href="https://www.linkedin.com/in/marlon-a-89715814b/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
         </div>
-        
+
       </footer>
     </>
   );
