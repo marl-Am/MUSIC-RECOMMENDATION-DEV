@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MusicalNotes from './utils/MusicalNotes';
 import './App.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
@@ -33,7 +34,7 @@ export default function App() {
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     {/*header*/}
-                    <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                    <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t bg-gray-900 text-white">
                       <h3 className="text-3xl font-semibold">
                         About My Music Recommendation App
                       </h3>
@@ -47,8 +48,8 @@ export default function App() {
                       </button>
                     </div>
                     {/*body*/}
-                    <div className="relative p-6 flex-auto">
-                      <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                    <div className="relative p-6 flex-auto bg-gray-700">
+                      <p className="my-4 text-white text-lg leading-relaxed">
                         This app recommends music based on your listening habits. It uses a variety of factors to make recommendations, including the artists you listen to, and returns the artists closest to your preferences.
 
                         To get started, simply enter an artist into the search bar and press enter. The app will then generate a list of recommended artists with links to their spotify page.
@@ -58,7 +59,7 @@ export default function App() {
                       </p>
                     </div>
                     {/*footer*/}
-                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b bg-gray-700">
                       <button
                         className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
@@ -76,16 +77,18 @@ export default function App() {
             </>
           ) : null}
         </>
-
-        <br></br>
-        <br></br>
-        <Header />
       </div>
-      <br className='mb-2'></br>
+      <br></br>
+      <br></br>
+      <MusicalNotes />
+      <h2 className='text-xl font-semibold text-center text-white'>Get Artist Recommendations</h2>
+      <br></br>
+      <Header />
       <br className='mb-4'></br>
-      <br className='mb-8'></br>
+      <br className='mb-4'></br>
       <Footer />
     </div>
   );
 }
+
 
