@@ -10,9 +10,9 @@ function Results({ similarArtists }) {
                     <a className="card artist-card" key={artist.id} href={`https://open.spotify.com/artist/${artist.id}`} target="_blank" rel="noopener noreferrer">
                         <div className="card_image">
                             {artist.image_url ? (
-                                <img src={artist.image_url} alt="Artist picture" />
+                                <img src={artist.image_url} alt="The artist" />
                             ) : (
-                                <img src="static/img/not_found.png" alt="Not Found" />
+                                <img src="../assets/image1.jpg" alt="Not Found" />
                             )}
                         </div>
                         <div className="card_title artist-name">
@@ -22,7 +22,7 @@ function Results({ similarArtists }) {
                 ))}
             </div>
             <br className='mb-2'></br>
-            
+
         </div>
     );
 }
