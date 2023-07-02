@@ -1,11 +1,13 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Results from './Results';
+import Loader from './Loader';
 import './Header.css';
 
 function Header() {
     const [artistName, setArtistName] = useState('');
     const [similarArtists, setSimilarArtists] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
     const inputRef = useRef();
 
 
@@ -15,6 +17,7 @@ function Header() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true);
         const response = await fetch('/get_recommendations', {
             method: 'POST',
             headers: {
@@ -40,6 +43,8 @@ function Header() {
         } catch (error) {
             console.error('JSON parsing error:', error);
             alert('JSON parsing error: ' + error.message);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -62,6 +67,8 @@ function Header() {
                     </form>
                 </div>
             </div>
+
+            {isLoading && <Loader />}
 
 
             <br></br>
